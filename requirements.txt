@@ -1,8 +1,5 @@
 streamlit
 openai
-import streamlit as st
-import pandas as pd
-from openai import OpenAI
-import os
-import datetime
-import locale
+os
+datetime
+locale
