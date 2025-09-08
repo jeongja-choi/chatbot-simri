@@ -22,16 +22,25 @@ st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("<p style='opacity:0.7;'>꿈을 통해 당신의 심리 상태를 분석하고 개선 방안을 제시합니다.</p>", unsafe_allow_html=True)
 st.markdown("<br><br>", unsafe_allow_html=True)
 
-# ---- 사이드바: OpenAI API 키 ----
-st.sidebar.title("설정")
-if "api_key" not in st.session_state:
-    st.session_state.api_key = ""
-st.session_state.api_key = st.sidebar.text_input("🔑 OpenAI API Key", type="password", value=st.session_state.api_key)
-if not st.session_state.api_key:
-    st.sidebar.warning("API 키를 입력해야 사용 가능합니다.")
+# ---- 사이드바: OpenAI API 키 는  현재 아래 시크릿파일대체----
+## st.sidebar.title("설정")
+## if "api_key" not in st.session_state:
+##    st.session_state.api_key = ""
+## st.session_state.api_key = st.sidebar.text_input("🔑 OpenAI API Key", type="password", value=st.session_state.api_key)
+## if not st.session_state.api_key:
+##    st.sidebar.warning("API 키를 입력해야 사용 가능합니다.")
+##    st.stop()
+
+##client = OpenAI(api_key=st.session_state.api_key)
+
+# Streamlit Secrets에서 API 키를 불러옵니다.
+api_key = st.secrets.get("OPENAI_API_KEY")
+
+if not api_key:
+    st.error("❌ OpenAI API 키가 설정되지 않았습니다.")
     st.stop()
 
-client = OpenAI(api_key=st.session_state.api_key)
+client = OpenAI(api_key=api_key)
 
 # ---- 세션 상태 초기화 ----
 if "analysis_step" not in st.session_state:
