@@ -24,9 +24,10 @@ except:
 # ---- 페이지 설정 ----
 st.set_page_config(page_title="꿈 해몽 심리 분석 🌙", layout="wide")
 st.title("🌙 꿈 해몽 심리 분석 챗봇")
-st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("<p style='opacity:0.7;'>⚠️ **참고: 앱이 잠들어 있을 경우, 잠시 후 재접속하면 정상적으로 작동합니다.**</p>", unsafe_allow_html=True)
 st.markdown("<p style='opacity:0.7;'>꿈을 통해 당신의 심리 상태를 분석하고 개선 방안을 제시합니다.</p>", unsafe_allow_html=True)
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
+
 
 # ---- 사이드바: OpenAI API 키 는  현재 아래 시크릿파일대체----
 ## st.sidebar.title("설정")
