@@ -6,6 +6,12 @@ import os
 import datetime
 import locale
 
+# 앱이 로드될 때만 잠시 나타나는 메시지
+with st.spinner("✨ 앱을 시작하고 있습니다. 잠시만 기다려주세요..."):
+    time.sleep(2) # 짧은 지연 시간을 주어 메시지 확인 가능
+st.success("✅ 준비 완료! 꿈 해몽을 시작해 보세요.")
+
+
 # 로케일 설정
 try:
     locale.setlocale(locale.LC_ALL, 'ko_KR.UTF-8')
