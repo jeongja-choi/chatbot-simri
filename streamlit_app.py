@@ -5,6 +5,7 @@ from openai import OpenAI
 import os
 import datetime
 import locale
+import time
 
 # 앱이 로드될 때만 잠시 나타나는 메시지
 with st.spinner("✨ 앱을 시작하고 있습니다. 잠시만 기다려주세요..."):
