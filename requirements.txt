@@ -1,23 +1,2 @@
 streamlit
 openai
-# Core dependencies
-numpy
-pandas
-matplotlib
-
-# Data processing
-scikit-learn
-scipy
-
-# Optional but commonly used
-seaborn
-jupyter
-
-# Development tools
-pytest
-black
-flake8
-
-# Documentation
-sphinx
-sphinx-rtd-theme0
