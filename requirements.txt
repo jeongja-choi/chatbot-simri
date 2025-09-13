@@ -1,2 +1,11 @@
+# Core dependencies
 streamlit
+pandas
 openai
+# Optional but useful
+python-dotenv  # For .env file support
+
+# Development tools
+pytest
+black
+flake8
